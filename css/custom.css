@@ -1,0 +1,20 @@
+
+.datepicker{
+	color: black;
+}
+  a{
+            color: white !important;
+        }
+        .dropdown-toggle{
+            font-size: 2em;
+        }
+
+body{
+	background-color: white !important;
+}
+.table{
+	margin-top: 20px;
+}
+.ui-state-default{
+	color: black !important;
+}

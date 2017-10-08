@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Social Welfare Department, Govt. of Bihar</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.min.css">
+      <link rel="stylesheet" type="text/css" href="css/datatable.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        
+       
+        .canvas{
+            height: 250px !important;
+            /*widows: 100% !important;*/
+        }
+        a{
+            color: white !important;
+        }
+        .btn btn-default btn-warning{
+            font-size: 2em;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: #808080 !important;height: 82px;color: white !important;">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+          
+                 <a class="navbar-brand" href="dashboard.html"><img src="img/sb.png" class="img-responsive" style="height:70px;margin-top:-10px;"></a>
+                <a class="navbar-brand" href="dashboard.html"><img src="img/top-welfare.gif" class="img-responsive" style="height:70px;margin-top:-10px;margin-left:-13px"></a>
+				<a class="navbar-brand" href="dashboard.html"><img src="img/poster.jpg" class="img-responsive" style="height:70px;margin-top:-10px; width:400px; margin-left:-42px"></a>
+                
+
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-left top-nav pull-right" style="margin-top: 10px;margin-right: 10px;">
+                <li class="dropdown">
+                    <a href="#" class="btn btn-default btn-warning btn-lg" style="margin: 10px;">Home</a>
+                   
+                </li>
+            
+                <li class="dropdown">
+                    <a href="#" class="btn btn-default btn-warning btn-lg" style="margin: 10px;">Scheme Details</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="btn btn-default btn-warning btn-lg" style="margin: 10px;">Help</a>
+                </li>
+                <li class="dropdown">
+                    <a href="https://avnishere.github.io/login" class="btn btn-default btn-warning btn-lg" style="margin: 10px;">Log Out</a>
+                </li>
+
+            </ul>
+
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse" style="background-color: #808080 !important;color: white !important;">
+                <ul class="nav navbar-nav side-nav" style="background-color: #808080 !important;margin-top:-1px !important;color: white !important;">
+                    <li >
+                        <a href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="aadhar.html">Aadhar&nbsp;Validation</a>
+                    </li>
+                    <!-- <li> -->
+                        <!-- <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a> -->
+                    <!-- </li> -->
+                    <li class="">
+                        <a href="pension.html">Pension&nbsp;Scheduler</a>
+                    </li>
+                    <li>
+                        <a href="payment.html">Payment Folder</a>
+                    </li>
+                    <li>
+                        <a href="reports.html">Reports</a>
+                    </li>
+                    <li>
+                        <a href="passbook.html">E-Passbook</a>
+                       
+                    </li>
+                    <li>
+                        <a href="allotment.html">Allotment</a>
+                    </li>
+                    <li class="active">
+                        <a href="uc.html">UC</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+           <div class="container-fluid">
+
+                 <div class="row">
+                    <table class="table">
+                        <tr style="background-color:#7B2A3B; color: white;">
+                            <td colspan="5">Please enter details</td>
+                        </tr>
+                        <span class="yolo">
+                      
+                        <tr style="background:#424242 !important;color: white;">
+                            <td colspan="2">
+                                <span style="color: red;">*</span>Select District
+                            </td>
+                            <td colspan="3">
+                               <select class="form-control"><option selected="selected">Select District</option>
+                                <option>Beguserai</option>
+                                <option>Madhepura</option>
+                                <option>Saharsa</option>
+                                <option>Patna</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr style="background:#424242 !important;color: white;">
+                            <td colspan="1"> <span style="color: red;">*</span>Select Time Range</td>
+                            <td>
+                                FROM
+                            </td>
+                            <td><input type="text" name="" class="datepicker"></td>
+                            <td>TO</td>
+                            <td><input type="text" name="" class="datepicker"></td>
+                        </tr>
+                         
+                         <!-- <tr style="background:#424242 !important;color: white;">
+                            <td colspan="2"> <span style="color: red;">*</span>Select Scheme</td>
+                            <td colspan="3">
+                                <select class="form-control">
+                            <option selected="selected">Select Scheme</option>
+                            <option></option>
+                        </select>
+                            </td>
+                        </tr> -->
+                       <tr style="background:#424242 !important;color: white;">
+                            <td colspan="5"><button class="pull-right btn btn-primary go">
+                                GO
+                            </button></td>
+                        </tr>
+                        <!--  <tr style="background:#424242 !important;color: white;">
+                            <td colspan="2"> <span style="color: red;">*</span></td>
+                            <td colspan="3"></td>
+                        </tr> -->
+                        </span>
+                    </table>
+                </div>
+                </div>
+                <span style="display: none;" id="table">
+                <div class="row" >
+                    <div class="col-sm-12">
+                          <table class="table" id="actual_table" border="1">
+                          <!-- 20 -->
+                            <thead>
+                                <tr bgcolor="#95a7e2">
+									<th colspan="1" class "text-center"></th>
+                                    <th colspan="5" class="text-center">Amount Received</th>
+                                    <th colspan="5" class="text-center">Amount Disbursed</th>
+                                    <th colspan="5" class="text-center">Amount Returned</th>
+                                    <th colspan="5" class="text-center">Amount Remaining</th>
+									<th colspan="1" class "text-center"></th>
+
+                                </tr>
+                                <tr>
+									<th colspan="1" class="text-center">Scheme</th>
+                                    <th colspan="2" class="text-center">General</th>
+                                    <th colspan="2" class="text-center">Special</th>
+                                    <th colspan="1" class="text-center">TSP</th>
+                                    <th colspan="2" class="text-center">General</th>
+                                    <th colspan="2" class="text-center">Special</th>
+                                    <th colspan="1" class="text-center">TSP</th>
+                                    <th colspan="2" class="text-center">General</th>
+                                    <th colspan="2" class="text-center">Special</th>
+                                    <th colspan="1" class="text-center">TSP</th>
+                                    <th colspan="2" class="text-center">General</th>
+                                    <th colspan="2" class="text-center">Special</th>
+                                    <th colspan="1" class="text-center">TSP</th>
+									<th colspan="1" class="text-center"></th>
+                                </tr>
+                                <tr>
+									<th></th>
+                                    <th>Center</th>
+                                    <th>State</th>
+                                    <th>Center</th>
+                                    <th>State</th>
+                                    <th></th>
+                                    <th>Center</th>
+                                    <th>State</th>
+                                    <th>Center</th>
+                                    <th>State</th>
+                                    <th></th>
+                                    <th>Center</th>
+                                    <th>State</th>
+                                    <th>Center</th>
+                                    <th>State</th>
+                                    <th></th>
+                                    <th>Center</th>
+                                    <th>State</th>
+                                    <th>Center</th>
+                                    <th>State</th>
+                                    <th></th>
+									<th>Total</th>
+                                </th>
+                            </thead> 
+
+							<tr>
+									<td>IGNOAPS</td>
+									<td class='text-center'>1200</td>
+									<td class='text-center'>1400</td>
+									<td class='text-center'>1650</td>
+									<td class='text-center'>7240</td>
+									<td class='text-center'>8865</td>
+									<td class='text-center'>2314</td>
+									<td class='text-center'>1716</td>
+									<td class='text-center'>52289</td>
+									<td class='text-center'>76521</td>
+									<td class='text-center'>1500</td>
+									<td class='text-center'>1108</td>
+									<td class='text-center'>50040</td>
+									<td class='text-center'>70453</td>
+									<td class='text-center'>987600</td>
+									<td class='text-center'>13200</td>
+									<td class='text-center'>17009</td>
+									<td class='text-center'>1233</td>
+									<td class='text-center'>1540</td>
+									<td class='text-center'>1400</td>
+									<td class='text-center'>1800</td>
+									<td class='text-center'>68450</td>
+									
+							</tr>
+							
+							<tr>
+									<td>IGNWPS</td>
+									<td class='text-center'>1245</td>
+									<td class='text-center'>1782</td>
+									<td class='text-center'>1609</td>
+									<td class='text-center'>1500</td>
+									<td class='text-center'>17006</td>
+									<td class='text-center'>1543</td>
+									<td class='text-center'>9860</td>
+									<td class='text-center'>8970</td>
+									<td class='text-center'>6790</td>
+									<td class='text-center'>6750</td>
+									<td class='text-center'>5630</td>
+									<td class='text-center'>8790</td>
+									<td class='text-center'>564100</td>
+									<td class='text-center'>9087</td>
+									<td class='text-center'>13000</td>
+									<td class='text-center'>15420</td>
+									<td class='text-center'>8700</td>
+									<td class='text-center'>8976</td>
+									<td class='text-center'>9087</td>
+									<td class='text-center'>6750</td>
+									<td class='text-center'>850097</td>
+							</tr>
+							
+							<tr>
+									<td>IGNDPS</td>
+									<td class='text-center'>7860</td>
+									<td class='text-center'>7600</td>
+									<td class='text-center'>5600</td>
+									<td class='text-center'>1800</td>
+									<td class='text-center'>3000</td>
+									<td class='text-center'>7800</td>
+									<td class='text-center'>8976</td>
+									<td class='text-center'>15004</td>
+									<td class='text-center'>5410</td>
+									<td class='text-center'>9860</td>
+									<td class='text-center'>9000</td>
+									<td class='text-center'>100008</td>
+									<td class='text-center'>89007</td>
+									<td class='text-center'>7860</td>
+									<td class='text-center'>1800</td>
+									<td class='text-center'>2314</td>
+									<td class='text-center'>808080</td>
+									<td class='text-center'>3000</td>
+									<td class='text-center'>7600</td>
+									<td class='text-center'>89007</td>
+									<td class='text-center'>200430</td>
+									
+							</tr>
+							
+							<tr>
+									<td>LSSPS</td>
+									<td class='text-center'>6750</td>
+									<td class='text-center'>3460</td>
+									<td class='text-center'>2001</td>
+									<td class='text-center'>5000</td>
+									<td class='text-center'>180002</td>
+									<td class='text-center'>5600</td>
+									<td class='text-center'>424242</td>
+									<td class='text-center'>4342</td>
+									<td class='text-center'>7860</td>
+									<td class='text-center'>3140</td>
+									<td class='text-center'>4342</td>
+									<td class='text-center'>1800</td>
+									<td class='text-center'>9087</td>
+									<td class='text-center'>13000</td>
+									<td class='text-center'>5630</td>
+									<td class='text-center'>89760</td>
+									<td class='text-center'>9080</td>
+									<td class='text-center'>17001</td>
+									<td class='text-center'>16000</td>
+									<td class='text-center'>13000</td>
+									<td class='text-center'>286540</td>
+									
+							</tr>
+							
+							<tr>
+									<td>BDPS</td>
+									<td class='text-center'>15000</td>
+									<td class='text-center'>17600</td>
+									<td class='text-center'>18760</td>
+									<td class='text-center'>17600</td>
+									<td class='text-center'>1569</td>
+									<td class='text-center'>1680</td>
+									<td class='text-center'>1765</td>
+									<td class='text-center'>1890</td>
+									<td class='text-center'>5490</td>
+									<td class='text-center'>8760</td>
+									<td class='text-center'>9045</td>
+									<td class='text-center'>4020</td>
+									<td class='text-center'>1200</td>
+									<td class='text-center'>8970</td>
+									<td class='text-center'>17860</td>
+									<td class='text-center'>8760</td>
+									<td class='text-center'>19876</td>
+									<td class='text-center'>90087</td>
+									<td class='text-center'>7168</td>
+									<td class='text-center'>15000</td>
+									<td class='text-center'>76080</td>
+									
+							</tr>
+							
+							<tr>
+									<td>SSSPS</td>
+									<td class='text-center'>7600</td>
+									<td class='text-center'>9900</td>
+									<td class='text-center'>3000</td>
+									<td class='text-center'>2001</td>
+									<td class='text-center'>100008</td>
+									<td class='text-center'>6500</td>
+									<td class='text-center'>5600</td>
+									<td class='text-center'>6600</td>
+									<td class='text-center'>5430</td>
+									<td class='text-center'>4420</td>
+									<td class='text-center'>5677</td>
+									<td class='text-center'>9647</td>
+									<td class='text-center'>6374</td>
+									<td class='text-center'>9087</td>
+									<td class='text-center'>4500</td>
+									<td class='text-center'>5400</td>
+									<td class='text-center'>3500</td>
+									<td class='text-center'>7600</td>
+									<td class='text-center'>6700</td>
+									<td class='text-center'>143000</td>
+									<td class='text-center'>347067</td>
+									
+							</tr>
+							
+							<tr>
+									<td>TOTAL</td>
+									<td class='text-center'>39655</td>
+									<td class='text-center'>41744</td>
+									<td class='text-center'>32620</td>
+									<td class='text-center'>35141</td>
+									<td class='text-center'>1930468</td>
+									<td class='text-center'>25437</td>
+									<td class='text-center'>154802</td>
+									<td class='text-center'>67540</td>
+									<td class='text-center'>12780</td>
+									<td class='text-center'>15630</td>
+									<td class='text-center'>17680</td>
+									<td class='text-center'>43908</td>
+									<td class='text-center'>13208</td>
+									<td class='text-center'>56402</td>
+									<td class='text-center'>17650</td>
+									<td class='text-center'>45302</td>
+									<td class='text-center'>17650</td>
+									<td class='text-center'>187022</td>
+									<td class='text-center'>176203</td>
+									<td class='text-center'>76520</td>
+									<td class='text-center'></td>
+									
+							</tr>
+                            </tbody>
+                          
+                        </table>
+                    </div>
+                </div>
+                <!-- /.row -->
+                <div class="row" style="margin-top:20px">
+                    <div class="col-sm-6">
+                        <button class="btn btn-primary pull-left">Download in Excel</button>
+                    </div>
+                </div>
+                </span>
+            </div>
+
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/datatable.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+
+  
+        <script type="text/javascript">
+        $(document).ready(function(){
+            
+            $('.go').click(function(){
+
+                $('#table').show();
+
+               
+            });
+             $( ".datepicker" ).datepicker();
+        });
+    </script>
+     <script type="text/javascript">
+                                    $(document).ready(function(){
+                                        var html="";
+                                        for (var i =10; i >= 0; i--) {
+                                            var max=3000;
+                                            var min=1000;
+                                            var temp="<tr>";
+                                            for (var j =19; j >= 0; j--) {
+                                                temp+="<td>"+Math.floor(Math.random() * (max - min)) + min;+"</td>";
+                                            }
+                                            temp+="</tr>";
+                                            html+=temp;
+                                        }
+                                        
+                                        $('#recur').append(html);
+                                        $('#actual_table').DataTable();
+                                    });
+                            </script>
+</body>
+
+</html>
