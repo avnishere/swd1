@@ -142,7 +142,7 @@
                             <canvas id="bar" class="canvas" ></canvas>
                         </div>
                        <div class="col-sm-4" style="width:40%">
-                             <canvas id="pie" class="canvas"></canvas><p style="margin-left:150px;margin-top:7px; color:#8b8b8b">Expenditures</p>
+                             <canvas id="pie" class="canvas"></canvas><p style="margin-left:150px;margin-top:7px; color:black>Expenditures</p>
 							 
                         </div>
                         <div class="col-sm-4" style="border: none;padding:5px; left: 0px;width:20%">
@@ -243,6 +243,7 @@
        <script type="text/javascript" src="js/chart.js"></script>
     <canvas id="myChart" width="400" height="400"></canvas>
     <script>
+	    Chart.defaults.global.defaultFontColor = '#000';
     var ctx = document.getElementById("bar").getContext('2d');
     var pie = document.getElementById("pie").getContext('2d');
     var myChart = new Chart(ctx, {
