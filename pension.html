@@ -33,60 +33,10 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style type="text/css">
-	
-	.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-/* The actual popup (appears on top) */
-.popup .popuptext {
-    visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-}
         
-       
+        .active{
+            background-color: #0071A7 !important;
+        }
         .canvas{
             height: 250px !important;
             /*widows: 100% !important;*/
@@ -117,7 +67,7 @@
                 </button>
           
                  <a class="navbar-brand" href="dashboard.html"><img src="img/sb.png" class="img-responsive" style="height:70px;margin-top:-10px;"></a>
-          <a class="navbar-brand" href="dashboard.html"><img src="img/top-welfare.gif" class="img-responsive" style="height:70px;margin-top:-10px;margin-left:-13px"></a>
+                <a class="navbar-brand" href="dashboard.html"><img src="img/top-welfare.gif" class="img-responsive" style="height:70px;margin-top:-10px;margin-left:-13px"></a>
 	<div style="color:#fff; margin-left:450px; font-family:serif;margin-top:-10px;"><h3 style="font-weight:bold">NATIONAL</h3><h4 style="font-weight:bold">SOCIAL&nbsp;&nbsp; ASSISTANCE&nbsp;&nbsp; PROGRAMME</h4></div>
                 
 
@@ -133,7 +83,7 @@
                     <a href="#" class="btn btn-default btn-warning btn-lg" style="margin: 10px;">Scheme Details</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="btn btn-default btn-warning btn-lg" style="margin: 10px;">help</a>
+                    <a href="#" class="btn btn-default btn-warning btn-lg" style="margin: 10px;">Help</a>
                 </li>
                 <li class="dropdown">
                     <a href="https://avnishere.github.io/login" class="btn btn-default btn-warning btn-lg" style="margin: 10px;">Log Out</a>
@@ -181,208 +131,160 @@
 
            <div class="container-fluid">
 
+                <!-- Page Heading -->
+                  <!-- Page Heading -->
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Choose Mode</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="pension2.html"> Automatic </a>
+    <a href="pension1.html"> Manual </a>
+  </div>
+</div>
+                  <!--   </table>
+                  --> 
+                </div>
                  <div class="row">
-                    <table class="table">
-                        <tr style="background-color:#7B2A3B; color: white;">
-                            <td colspan="5">Please enter details</td>
-                        </tr>
-                        <span class="yolo">
-                        <tr style="background:#424242 !important;color: white;">                            <td colspan="2"><span style="color: red;">*</span>Payment for the month of </td>
-                            <td colspan="1">
-                                <input type="text" name="" class="datepicker">
-                            </td>
-                            <td colspan="2">
-                                
-                            <select class="form-control">
-                            <option selected="selected">Share Type</option>
-                            <option>State</option>
-                            <option>Central</option>
-                        </select>
-                            </td>
-                        </tr>
-                        <tr style="background:#424242 !important;color: white;">
-                            <td colspan="2">
-                                <span style="color: red;">*</span>Select District
-                            </td>
-                            <td colspan="3">
-                               <select class="form-control"><option selected="selected">Select District</option>
-                                <option>Beguserai</option>
-                                <option>Madhepura</option>
-                                <option>Saharsa</option>
-                                <option>Patna</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr style="background:#424242 !important;color: white;">
-                            <td colspan="2"> <span style="color: red;">*</span>Select Block</td>
-                            <td colspan="3">
-                                <select class="form-control"><option selected="selected">Select Block</option>
-                                <option>Madhaili</option>
-                                <option>Shankarpur</option>
-                                <option>Rampur</option>
-                                <option>Mathai</option>
-                                </select>
-                            </td>
-                        </tr>
-                         <tr style="background:#424242 !important;color: white;">                            <td colspan="2">Select Scheme</td>
-                            <td colspan="3">
-                                <select class="form-control">
-                                    <option selected="selected">Select Scheme</option>
-                                <option>IGNOAPS</option>
-                                <option>IGNWPS</option>
-                                <option>IGNDPS</option>
-                                <option>LSSPS</option>
-                                <option>BDPS</option>
-                                <option>SSSPS</option>
-                                </select>
-                            </td>
-                        </tr>
-                         
-                       <tr style="background:#424242 !important;color: white;">
-                            <td colspan="5"><button class="pull-right btn btn-primary go">
-                                GO
-                            </button></td>
-                        </tr>
-                        <!--  <tr style="background:#424242 !important;color: white;">
-                            <td colspan="2"> <span style="color: red;">*</span></td>
-                            <td colspan="3"></td>
-                        </tr> -->
-                        </span>
-                    </table>
+                    <div class="col-sm-3"><br></div>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3"></div>
                 </div>
-                </div>
-                <span style="display: none;" id="table">
+                <span  id="table" style="display:none">
                 <div class="row" >
                     <div class="col-sm-12">
-                          <table class="table" id="actual_table" border="1">
+                        <table class="table" id="actual_table" border="1">
                             <thead>
                                 <tr bgcolor="#95a7e2">
-                                    <th class='text-center'>S.No</th>
-                                    <th class='text-center'>Beneficiary&nbsp;Name</th>
-                                    <th class='text-center'>District</th>
-                                    <th class='text-center'>Mobile&nbsp;No.</th>
-                                    <th class='text-center'>Bank&nbsp;Account&nbsp;No.</th>
-                                    <th class='text-center'>IFSC</th>
-                                    <th class='text-center'>Amount</th>
-                                    <th class='text-center'>Select</th>
-                                   <!--  <th class='text-center'>Block</th>
-                                    <th class='text-center'>Fathers&nbsp;Name</th>
-                                    <th class='text-center'>Adhaar&nbsp;<input type="checkbox" class="form-control">.</th>
-                                    <th class='text-center'>Date&nbsp;of&nbsp;Birth</th>
-                                    <th class='text-center'>Physically&nbsp;Challenged</th> -->
+                                    <th colspan="2"></th>
+                                    <th colspan="2" class="text-center">General Component</th>
+                                    <th colspan="2" class="text-center">Special Component</th>
+                                    <th colspan="1" class="text-center">TSP Component</th>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <th colspan="1">Scheme</th>
+                                    <th colspan="1">Center</th>
+                                    <th colspan="1">State</th>
+                                    <th colspan="1">Center</th>
+                                    <th colspan="1">State</th>
+                                    <th colspan="1">Center</th>
+                                    
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td class='text-center'>1.</td>
-                                    <td class='text-center'>Ram Sharan</td>
-                                    <td class='text-center'>Patna</td>
-                                    <td class='text-center'>8989898989</td>
-                                    <td class='text-center'>532125185691</td>
-                                    <td class='text-center'>SBI01234444</td>
-                                    <!-- <td class='text-center'>Ashiana</td>
-                                    <td class='text-center'>Mahesh&nbsp;Sharan</td>
-                                    <td class='text-center'>501243526745</td> -->
-                                    <td class='text-center'>23,984</td>
-                                    <td class='text-center'><input type="checkbox" class="form-control"></td>
+                                    <td class='text-center'>IGNOAPS</td>
+                                    <td class='text-center'><input onblur="findTotal()" type="text" name="qty" id="qty1"></td>
+                                    <td class='text-center'><input onblur="findTotal()" type="text" name="qtya"id="qtya1" ></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    
+                                  
                                 </tr>
                                 
                                 <tr>
                                     <td class='text-center'>2.</td>
-                                    <td class='text-center'>Madhur Bhaskar</td>
-                                    <td class='text-center'>Madhepura</td>
-                                    <td class='text-center'>9842561736</td>
-                                    <td class='text-center'>657634987678</td>
-                                    <td class='text-center'>PNB01234534</td>
-                                  <!--   <td class='text-center'>Naurangpur</td>
-                                    <td class='text-center'>Naren&nbsp;Bhaskar</td>
-                                    <td class='text-center'>786438910287</td> -->
-                                    <td class='text-center'>11,964</td>
-                                    <td class='text-center'><input type="checkbox" class="form-control"></td>
+                                    <td class='text-center'>IGNWPS</td>
+                                    <td class='text-center'><input onblur="findTotal()"type="text" name="qty" id="qty2"></td>
+                                    <td class='text-center'><input onblur="findTotal()"type="text" name="qtya" id="qtya2"></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    
+                                    
                                 </tr>
                                 
                                 <tr>
                                     <td class='text-center'>3.</td>
-                                    <td class='text-center'>Shiv Mahato</td>
-                                    <td class='text-center'>Patna</td>
-                                    <td class='text-center'>8767546239</td>
-                                    <td class='text-center'>532165437812</td>
-                                    <td class='text-center'>IDB01236544</td>
-                                <!--     <td class='text-center'>Digha</td>
-                                    <td class='text-center'>Sanjeev&nbsp;Mahato</td>
-                                    <td class='text-center'>672184390123</td>
- -->                                    <td class='text-center'>1,974</td>
-                                    <td class='text-center'><input type="checkbox" class="form-control"></td>
+                                    <td class='text-center'>IGNDPS</td>
+                                   <td class='text-center'><input onblur="findTotal()" type="text" name="qty" id="qty3"></td>
+                                    <td class='text-center'><input onblur="findTotal()" type="text" name="qtya" id="qtya3"></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    
+                                   
                                 </tr>
                                 
                                 <tr>
                                     <td class='text-center'>4.</td>
-                                    <td class='text-center'>Vineet Kumar</td>
-                                    <td class='text-center'>Saharsa</td>
-                                    <td class='text-center'>8989898989</td>
-                                    <td class='text-center'>532125185691</td>
-                                    <td class='text-center'>SBI01234674</td>
-                                   <!--  <td class='text-center'>Rampur</td>
-                                    <td class='text-center'>Vinod&nbsp;Kumar&nbsp;Gupta</td>
-                                    <td class='text-center'>673421786524</td> -->
-                                    <td class='text-center'>304</td>
-                                    <td class='text-center'><input type="checkbox" class="form-control"></td>
+                                    <td class='text-center'>LSSPS</td>
+                                    <td class='text-center'><input onblur="findTotal()" type="text" name="qty" id="qty4"></td>
+                                    <td class='text-center'><input onblur="findTotal()" type="text" name="qtya" id="qtya4"></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    
+                            `
                                 </tr>
-                                
-                                <tr>
+								
+								<tr>
                                     <td class='text-center'>5.</td>
-                                    <td class='text-center'>Prabhu Nandan</td>
-                                    <td class='text-center'>Madhepura</td>
-                                    <td class='text-center'>8768453210</td>
-                                    <td class='text-center'>000987645312</td>
-                                    <td class='text-center'>HDF01234562</td>
-                                 <!--    <td class='text-center'>Madhaili</td>
-                                    <td class='text-center'>Dinesh&nbsp;Nandan</td>
-                                    <td class='text-center'>908769005431</td> -->
-                                    <td class='text-center'>2,192</td>
-                                    <td class='text-center'><input type="checkbox" class="form-control"></td>
+                                    <td class='text-center'>BDPS</td>
+                                    <td class='text-center'><input onblur="findTotal()" type="text" name="qty" id="qty5"></td>
+                                    <td class='text-center'><input onblur="findTotal()" type="text" name="qtya" id="qtya5"></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                   
+                            `
                                 </tr>
-                                
-                                <tr>
+								
+								<tr>
                                     <td class='text-center'>6.</td>
-                                    <td class='text-center'>Gurucharan Das</td>
-                                    <td class='text-center'>Patna</td>
-                                    <td class='text-center'>9011287654</td>
-                                    <td class='text-center'>000088761281</td>
-                                    <td class='text-center'>SBI08917238</td>
-                             <!--        <td class='text-center'>Patliputra</td>
-                                    <td class='text-center'>Mohan&nbsp;Das</td>
-                                    <td class='text-center'>673829109281</td> -->
-                                    <td class='text-center'>1,454</td>
-                                    <td class='text-center'><input type="checkbox" class="form-control"></td>
+                                    <td class='text-center'>SSSPS</td>
+                                    <td class='text-center'><input onblur="findTotal()"type="text" name="qty" id="qty6"></td>
+                                    <td class='text-center'><input onblur="findTotal()"type="text" name="qtya" id="qtya6"></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    
+                            `
                                 </tr>
+								
+								<tr>
+                                    <td class='text-center'>_</td>
+                                    <td class='text-center'>Total Amount</td>
+                                    <td class='text-center'><input type="text" name="total" id="total"></td>
+                                    <td class='text-center'><input type="text" name="totala" id="totala"></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    <td class='text-center'><input type="text" name=""></td>
+                                    
+                            `
+                                </tr>
+
+                                
+                           
                             </tbody>
 
                         </table>
                     </div>
                 </div>
                 <!-- /.row -->
+                <br>
                 <div class="row">
-				<div class="col-sm-6" style="width:300px">
-                        <input type="text" class="form-control" placeholder="*Remarks:">
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder="Remarks">
                     </div>
-<div class="col-sm-2" style="margin-left:60px">
-	<button style="font-size:18px""; class="btn btn-primary pull-left" onclick="myFunction()">Freeze for Payment<button>
-</div>
-                    
+                    <div class="col-sm-2">
+                        <button class="btn btn-primary pull-left" Style="Width:100PX" onclick="myFunction()">Allot</button>
+                    </div>
+                    <div class="col-sm-2">
+                        <!-- <button class="btn btn-warning pull-left">Reject</button> -->
+                    </div>
                 </div>
                 </span>
             </div>
-
             <!-- /.container-fluid -->
-			 <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation" style="background-color: #081916 !important;height: 20px;color: white !important;">	
-	<div class="navbar-footer" style="font-family: Verdana"><p class="pull-left">&nbsp;&nbsp;Copyright@2017 All Rights Reserved.<p></div>
-	<p class="pull-right">Managed by ICICI Bank &nbsp;&nbsp;</p></div>									 
 
         </div>
         <!-- /#page-wrapper -->
-	
-
+<nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation" style="background-color: #081916 !important;height: 20px;color: white !important;">	
+	<div class="navbar-footer" style="font-family: Verdana"><p class="pull-left">&nbsp;&nbsp;Copyright@2017 All Rights Reserved.<p></div>
+	<p class="pull-right">Managed by  ank &nbsp;&nbsp;</p></div>
     </div>
     <!-- /#wrapper -->
 
@@ -392,9 +294,9 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/datatable.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
 
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/datatable.js"></script>
     <!-- Morris Charts JavaScript -->
 <!--     <script src="js/plugins/morris/raphael.min.js"></script>
     <script src="js/plugins/morris/morris.min.js"></script>
@@ -523,10 +425,61 @@
     // var pu = document.getElementById("pie").getContext("2d");
     myPie = new Chart(pie, pie_config);
     </script>
-	
 	<script>
 function myFunction() {
-    alert("Payment File No. 54XX21XX Created Succesfully !");
+    alert("Allotment Saved Succesfully !");
+}
+</script>
+<script type="text/javascript">
+function findTotal(){
+    var arr = document.getElementsByName('qty');
+	var arra = document.getElementsByName('qtya');
+    var tot=0;
+	var tota=0;
+    for(var i=0;i<arr.length || i<arra.length;i++){
+        if(parseInt(arr[i].value))
+            tot += parseInt(arr[i].value);
+			if(parseInt(arra[i].value))
+			tota += parseInt(arra[i].value);
+    }
+    document.getElementById('total').value = tot;
+	document.getElementById('totala').value = tota;
+}
+
+    </script>
+	
+	<script type="text/javascript">
+        $(document).ready(function(){
+            $('#actual_table').DataTable();
+            $('.go').click(function(){
+
+                $('#table').show();
+
+               
+            });
+             $( ".datepicker" ).datepicker();
+        });
+    </script>
+	<script>
+	/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
 }
 </script>
 </body>
