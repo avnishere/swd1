@@ -91,7 +91,7 @@
 
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse" style="background-color: #223f6f !important;color: white !important;">
-                <ul class="nav navbar-nav side-nav" style="background-color: #223f6f !important;margin-top:-1px !important;color: white !important;">
+                <ul class="nav navbar-nav side-nav" style="background-color: #223f6f !important;margin-top:-1px !important;color: white !important; text-transform:uppercase">
                     <li class="active">
                         <a href="dashboard.html">Dashboard</a>
                     </li>
@@ -145,7 +145,8 @@
                             <canvas id="bar" class="canvas" ></canvas>
                         </div>
                        <div class="col-sm-4" style="width:40%">
-                             <canvas id="pie" class="canvas"></canvas><p style="margin-left:140px;margin-top:7px; color:Black"><strong>Expenditures</strong></p>
+                            <label for = "idOfCanvas"style="text-align:center">
+Expenditure<br /> <canvas id="pie" class="canvas" ></canvas></label>
 							 
                         </div>
                         <div class="col-sm-4" style="border: none;padding:5px; left: 0px;width:20%">
@@ -323,10 +324,14 @@
 				"SSSPS"
             ]
         },
-		label:'Expenditure',
+		
         options: {
             responsive: true
-        }
+        },
+		title: {
+            display: true,
+        },
+
     };
     // var pu = document.getElementById("pie").getContext("2d");
     myPie = new Chart(pie, pie_config);
