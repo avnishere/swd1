@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Social Welfare Department, Govt. of Bihar</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.min.css">
+      <link rel="stylesheet" type="text/css" href="css/datatable.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        
+       
+        .canvas{
+            height: 250px !important;
+            /*widows: 100% !important;*/
+        }
+        a{
+            color: white !important;
+        }
+        .btn btn-default btn-warning{
+            font-size: 2em;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: #223f6f !important;height: 82px;color: white !important;">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+          
+            <a class="navbar-brand" href="dashboard.html"><img src="img/sb.png" class="img-responsive" style="height:70px;margin-top:-10px;"></a>
+ <a class="navbar-brand" href="dashboard.html"><img src="img/top-welfare.gif" class="img-responsive" style="height:70px;margin-top:-10px;margin-left:-13px"></a>
+<div style="color:#fff; margin-left:450px; font-family:serif;margin-top:-10px;"><h3 style="font-weight:bold">NATIONAL</h3><h4 style="font-weight:bold">SOCIAL&nbsp;&nbsp; ASSISTANCE&nbsp;&nbsp; PROGRAMME</h4></div>
+                
+
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-left top-nav pull-right" style="margin-top: 10px;margin-right: 10px;">
+                <li class="dropdown">
+                    <a href="#" class="btn btn-default btn-warning btn-lg" style="margin: 10px;">Home</a>
+                   
+                </li>
+            
+                <li class="dropdown">
+                    <a href="#" class="btn btn-default btn-warning btn-lg" style="margin: 10px;">Scheme Details</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="btn btn-default btn-warning btn-lg" style="margin: 10px;">Help</a>
+                </li>
+
+            </ul>
+
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse" style="background-color: #223f6f !important;color: white !important;">
+                <ul class="nav navbar-nav side-nav" style="background-color: #223f6f !important;margin-top:-1px !important;color: white !important;">
+                   
+                    <li class="active">
+                        <a href="passbook.html">E-Passbook</a>
+                       
+                    </li>
+                    <li>
+                        <a href="https:avnishere.io/login">log in</a>
+                    </li>
+					 <li>
+                        <a href="http://www.icicibank.com">PFMS-Bank Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+          <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <table class="table">
+                        <tr style="background-color:#7B2A3B; color: white;">
+                            <td colspan="5">Please enter details</td>
+                        </tr>
+                        <span class="yolo">
+                        <tr style="background:#424242 !important;color: white;">                            <td colspan="1">Search By</td>
+                        
+                            <td colspan="1">
+                                <label style= "font-size:12px">Beneficiary ID<input type="radio" name="" class="form-control" style="border:0px;height:20px"></label>
+                            </td>
+                            <td colspan="1">
+                                <label style= "font-size:12px">Aadhar No.<input type="radio" name="" class="form-control" style="border:0px;height:20px"></label>
+                            </td>
+                            <td colspan="1">
+                                <label style= "font-size:12px">Account No.<input type="radio" name="" class="form-control" style="border:0px;height:20px"></label>
+                                
+                            </td>
+							<td><input type="text" class="form-control" placeholder="Enter" style="width:200px; margin-top:8px"></td>
+                         
+                        </tr>
+                        <tr style="background:#424242 !important;color: white;">
+                            <td colspan="1">
+                                <span style="">OR </span>Select District
+                            </td>
+                            <td colspan="2">
+                               <select class="form-control" style="width:50%"><option selected="selected">Select District</option>
+                                <option>Beguserai</option>
+                                <option>Madhepura</option>
+                                <option>Saharsa</option>
+                                <option>Patna</option>
+                                </select>
+                            </td>
+                             <td colspan="2">
+                                <select class="form-control" style="margin-left:-120px"><option selected="selected">Select Block</option>
+                                <option>Madhaili</option>
+                                <option>Shankarpur</option>
+                                <option>Rampur</option>
+                                <option>Mathai</option>
+                                </select>
+                            </td>
+                        </tr>
+             
+                   
+                       <tr style="background:#424242 !important;color: white;">
+                            <td colspan="5"><button class="pull-right btn btn-primary go">
+                                GO
+                            </button></td>
+                        </tr>
+                        <!--  <tr style="background:#424242 !important;color: white;">
+                            <td colspan="2"> <span style="color: red;">*</span></td>
+                            <td colspan="3"></td>
+                        </tr> -->
+                        </span>
+                    </table>
+                </div>
+              
+                 <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3"></div>
+                </div>
+                <span style="" id="table">
+                <div class="row" >
+                    <div class="col-sm-12">
+                        <table class="table" id="actual_table">
+                            <thead>
+                                <tr>
+                                    <th class='text-center' colspan="3">Ramdhari Singh- Begusarai</th>
+                                    
+                                </tr>
+                              
+                            </thead>
+                            <tbody>
+                                <tr style="background-color: #3299BB;color: white;">
+                                    <td class='text-center'>1.</td>
+                                    <td class='text-center'>Unique ID</td>
+                                    <td class='text-center'>34xx56 </td>
+                                </tr>
+                                <tr style="background-color: #3299BB;color: white;">
+                                    <td class='text-center'>2.</td>
+                                    <td class='text-center'>Address</td>
+                                    <td class='text-center'>34A/21 Patliputra </td>
+                              
+                                </tr>
+                                <tr style="background-color: #3299BB;color: white;">
+                                    <td class='text-center'>3.</td>
+                                    <td class='text-center'>Date of Birth</td>
+                                    <td class='text-center'>12/03/1981 </td>
+                                   
+                                </tr>
+                                  <tr style="background-color: #3299BB;color: white;">
+                                    <td class='text-center'>4.</td>
+                                    <td class='text-center'>Fathers Name</td>
+                                    <td class='text-center'>Shyam Lal</td>
+                                   
+                                </tr>
+                                  <tr style="background-color: #3299BB;color: white;">
+                                    <td class='text-center'>5.</td>
+                                    <td class='text-center'>Account No.</td>
+                                    <td class='text-center'>145278xxxxxx</td>
+                                   
+                                </tr>
+                                  <tr style="background-color: #3299BB;color: white;">
+                                    <td class='text-center'>6.</td>
+                                    <td class='text-center'>Adhaar No.</td>
+                                    <td class='text-center'>50123187xxxx</td>
+                                   
+                                </tr>
+                                </tr>
+                                  <tr style="background-color: #3299BB;color: white;">
+                                    <td class='text-center'>7.</td>
+                                    <td class='text-center'>Mobile No.</td>
+                                    <td class='text-center'>876545xxxx</td>
+                                   
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table" id="actual_table1">
+                            <thead>
+                                <tr>
+                                    <th class='text-center' colspan="4">Pension Payment History</th>
+                                    
+                                </tr>
+                                  <tr>
+                                    <th class='text-center'>S.No</th>
+                                    <th class='text-center'>Pension for the month of</th>
+                                    <th class='text-center'>Pension credited on</th>
+                                    <th class='text-center'>Total Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="background-color: #3299BB;color: white;">
+                                    <td class='text-center'>1.</td>
+                                    <td class='text-center'>June 2017</td>
+                                    <td class='text-center'>15 July 2017 </td>
+                                    <td class='text-center'>1200</td>
+                                    <td></td>
+                                </tr>
+                                <tr style="background-color: #3299BB;color: white;">
+                                    <td class='text-center'>2.</td>
+                                    <td class='text-center'>July 2017</td>
+                                    <td class='text-center'>18 Aug 2017</td>
+                                    <td class='text-center'>800</td>
+                                    <td></td>
+                                </tr>
+                                    <tr style="background-color: #3299BB;color: white;">
+                                    <td class='text-center'>3.</td>
+                                    <td class='text-center'>August 2017</td>
+                                    <td class='text-center'>20 Sep 2017</td>
+                                    <td class='text-center'>1600</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- /.row -->
+                
+                </span>
+            </div>
+
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+<nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation" style="background-color: #081916 !important;height: 20px;color: white !important;">	
+	<div class="navbar-footer" style="font-family: Verdana"><p class="pull-left">&nbsp;&nbsp;Copyright@2017 All Rights Reserved.<p></div>
+	<p class="pull-right">Managed by ICICI Bank &nbsp;&nbsp;</p></div>
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/datatable.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+<!--     <script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.min.js"></script>
+    <script src="js/plugins/morris/morris-data.js"></script> -->
+   <!--  
+    <script type="text/javascript">
+        Morris.Donut({
+          element: 'donut',
+          data: [
+            {label: "Expense", value: 12},
+            {label: "Expense2", value: 30},
+            {label: "Expense3", value: 20}
+          ],
+          colors:["#800000","#FFFF00","#FF0000"]
+        });
+        Morris.Bar({
+      element: 'bar',
+      data: [
+        { y: '2006', a: 100, b: 90 },
+        { y: '2007', a: 75,  b: 65 },
+        { y: '2008', a: 50,  b: 40 },
+        { y: '2009', a: 75,  b: 65 },
+        { y: '2010', a: 50,  b: 40 },
+        { y: '2011', a: 75,  b: 65 },
+        { y: '2012', a: 100, b: 90 }
+      ],
+      xkey: 'y',
+      ykeys: ['a'],
+      axes:true,
+      grid:false,
+      stacked:true,
+      labels: ['Series A', 'Series B']
+    });
+    </script> -->
+        <script type="text/javascript">
+        $(document).ready(function(){
+            // $('#actual_table').DataTable();
+            $('.go').click(function(){
+
+                $('#table').show();
+
+               
+            });
+             $( ".datepicker" ).datepicker();
+        });
+    </script>
+    <script type="text/javascript" src="js/chart.js"></script>
+    <canvas id="myChart" width="400" height="400"></canvas>
+    <script>
+    // var ctx = document.getElementById("bar").getContext('2d');
+    // var pie = document.getElementById("pie").getContext('2d');
+    // var myChart = new Chart(ctx, {
+    //     type: 'bar',
+    //     data: {
+    //         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    //         datasets: [{
+    //             label: '# of Votes',
+    //             data: [12, 19, 3, 5, 2, 3],
+    //             backgroundColor: [
+    //                 'rgba(255, 99, 132, 0.2)',
+    //                 'rgba(54, 162, 235, 0.2)',
+    //                 'rgba(255, 206, 86, 0.2)',
+    //                 'rgba(75, 192, 192, 0.2)',
+    //                 'rgba(153, 102, 255, 0.2)',
+    //                 'rgba(255, 159, 64, 0.2)'
+    //             ],
+    //             borderColor: [
+    //                 'rgba(255,99,132,1)',
+    //                 'rgba(54, 162, 235, 1)',
+    //                 'rgba(255, 206, 86, 1)',
+    //                 'rgba(75, 192, 192, 1)',
+    //                 'rgba(153, 102, 255, 1)',
+    //                 'rgba(255, 159, 64, 1)'
+    //             ],
+    //             borderWidth: 10
+    //         }]
+    //     },
+    //     options: {
+    //         scales: {
+    //             yAxes: [{
+    //                 ticks: {
+    //                     beginAtZero:true
+    //                 }
+    //             }]
+    //         }
+    //     }
+    // });
+    var randomScalingFactor = function() {
+        return Math.round(Math.random() * 100);
+    };
+
+    var pie_config = {
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                ],
+                backgroundColor: [
+    'rgb(255, 99, 132)',
+    'rgb(255, 159, 64)',
+    'rgb(255, 205, 86)',
+    'rgb(75, 192, 192)',
+    'rgb(54, 162, 235)',
+    'rgb(153, 102, 255)',
+    'rgb(201, 203, 207)'
+                ],
+                label: 'Dataset 1'
+            }],
+            labels: [
+                "Red",
+                "Orange",
+                "Yellow",
+                "Green",
+                "Blue"
+            ]
+        },
+        options: {
+            responsive: true
+        }
+    };
+    // var pu = document.getElementById("pie").getContext("2d");
+    // myPie = new Chart(pie, pie_config);
+    </script>
+</body>
+
+</html>
