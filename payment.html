@@ -123,6 +123,12 @@
 					 <li>
                         <a href="http://www.icicibank.com">PFMS-Bank Dashboard</a>
                     </li>
+					<li>
+                        <a href="sanction.html" >Sanction</a>
+                    </li>
+					<li>
+                        <a href="sanction_allotment_report.html" >Sanction Allotment Report</a>
+                    </li>		
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -173,9 +179,9 @@
                             <td><input type="text" class="datepicker" name=""></td>
                         </tr>
                          <tr style="background:#424242 !important;color: white;">                            <td colspan="2">Select Scheme</td>
-                            <td colspan="3">
+                            <td colspan="2">
                                 <select class="form-control">
-                                    <option selected="selected">Select Scheme</option>
+                                    <option selected="selected">Select</option>
                                 <option>IGNOAPS</option>
                                 <option>IGNWPS</option>
                                 <option>IGNDPS</option>
@@ -184,12 +190,11 @@
                                 <option>SSSPS</option>
                                 </select>
                             </td>
-                        </tr>
-                       <tr style="background:#424242 !important;color: white;">
-                            <td colspan="5"><button class="pull-right btn btn-primary go">
+							 <td colspan="2"><button class="pull-right btn btn-primary go">
                                 GO
                             </button></td>
                         </tr>
+                     
                         <!--  <tr style="background:#424242 !important;color: white;">
                             <td colspan="2"> <span style="color: red;">*</span></td>
                             <td colspan="3"></td>
@@ -232,10 +237,13 @@
                                 <tr bgcolor="#95a7e2">
                                     <th class='text-center'>S.No</th>
 									<th class='text-center'>Payment File No.</th>
+									
                                     <th class='text-center'>Locked On</th>
                                     <th class='text-center'>Pension For</th>
-                                    <th class='text-center'>No. of Beneficiaries</th>
-                                    <th class='text-center'>Total Amount</th>
+                                    <th class='text-center'>No. of <br>Beneficiaries</th>
+									<th class='text-center'>Pension Amount</th>
+									<th class='text-center'>Arrear</th>
+                                    <th class='text-center'>Total Amount<br>(In Crores)</th>
                                     <th class='text-center'>Sent to PFMS</th>
                                     <th class='text-center'>Status</th>
                                 </tr>
@@ -244,10 +252,13 @@
                                 <tr>
                                     <td class='text-center'>1.</td>
 									<td class='text-center'>45xx24xx</td>
+									
                                     <td class='text-center'>25/07/2017</td>
                                     <td class='text-center'>June 2017</td>
                                     <td class='text-center'>4300000</td>
-                                    <td class='text-center'>300 Cr</td>
+									<td class='text-center'>200</td>
+									<td class='text-center'>100</td>
+                                    <td class='text-center'>300</td>
                                     <td class='text-center'>Yes</td>
                                     <td class='text-center'>Paid</td>
                                 </tr>
@@ -255,10 +266,13 @@
                                 <tr>
                                     <td class='text-center'>2.</td>
 									<td class='text-center'>7865xx5x</td>
+									
                                     <td class='text-center'>14/08/2017</td>
                                     <td class='text-center'>July 2017</td>
                                     <td class='text-center'>3000000</td>
-                                    <td class='text-center'>120 Cr</td>
+									<td class='text-center'>650</td>
+									<td class='text-center'>325</td>
+                                    <td class='text-center'>975</td>
                                     <td class='text-center'>Yes</td>
                                     <td class='text-center'>Not Paid</td>
                                 </tr>
@@ -266,10 +280,13 @@
                                 <tr>
                                     <td class='text-center'>3.</td>
 									<td class='text-center'>45xx3x4z</td>
+									
                                     <td class='text-center'>20/09/2017</td>
                                     <td class='text-center'>Aug 2017</td>
                                     <td class='text-center'>2400000</td>
-                                    <td class='text-center'>380 Cr Cr</td>
+									<td class='text-center'>45.7</td>
+									<td class='text-center'>20.2</td>
+                                    <td class='text-center'>65.9</td>
                                     <td class='text-center'>No</td>
                                     <td class='text-center'>Paid</td>
                                 </tr>
@@ -277,10 +294,13 @@
                                 <tr>
                                     <td class='text-center'>4.</td>
 									<td class='text-center'>675xx4x5</td>
+									
                                     <td class='text-center'>04/10/2017</td>
                                     <td class='text-center'>Sep 2017</td>
                                     <td class='text-center'>3500000</td>
-                                    <td class='text-center'>640 Cr</td>
+									<td class='text-center'>78</td>
+									<td class='text-center'>34</td>
+                                    <td class='text-center'>112</td>
                                     <td class='text-center'>Yes</td>
                                     <td class='text-center'>Paid</td>
                                 </tr>
@@ -301,8 +321,9 @@
         </div>
         <!-- /#page-wrapper -->
 	    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation" style="background-color: #081916 !important;height: 20px;color: white !important;">	
-	<div class="navbar-footer" style="font-family: Verdana"><p class="pull-left">&nbsp;&nbsp;Copyright@2017 All Rights Reserved.<p></div>
-	<p class="pull-right">Managed by ICICI Bank &nbsp;&nbsp;</p></div>
+	<div class="navbar-footer" style="font-family: Verdana;"><p class="pull-left" style=" margin-top:10px">&nbsp;&nbsp;Copyright@2017 All Rights Reserved.<p></div>
+	<a href="http://www.icicibank.com" class="pull-right"><img src="img/icici.png" class="img-responsive" style="height:40px; width: 150px;margin-right:30px; margin-top:-8px"></a>
+
 
     </div>
     <!-- /#wrapper -->
